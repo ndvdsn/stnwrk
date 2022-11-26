@@ -53,8 +53,7 @@ const Project = () => {
         .catch(console.error)
     },[slug])
 
-    console.log(project)
-    if(!project) return <div>Loading...</div>
+    if(!project) return <div className="container mx-auto text-center">Loading...</div>
   return (
     <main className=" min-h-screen sm:p-12">
         <header className="container mx-auto bg-white grid grid-cols-1 sm:grid-cols-2 p-12 bg-green-100">

@@ -31,7 +31,7 @@ const Projects = () => {
       .catch(error => console.error)
   },[])
 
-  console.log(projects)
+  if(!projects) return <div className="container mx-auto text-center">Loading...</div>
   return (
     <main className="min-h-screen">
     <section className="grid grid-cols-1 sm:grid-cols-2 gap-12 p-12">

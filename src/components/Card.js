@@ -5,7 +5,7 @@ const Card = ({project, index}) => {
 
     const [opacity, setOpacity] = useState(false)
 
-    const cols = ["bg-violet-600", "bg-green-400", "bg-yellow-400", "bg-pink-400", "bg-pink-600", "bg-red-500", "bg-lime-400", "bg-cyan-400"]
+    const cols = ["bg-green-100", "bg-slate-300", "bg-zinc-400", "bg-gray-200", "bg-green-100", "bg-green-100", "bg-green-100", "bg-green-100"]
   
     const hover = () => {
         setOpacity(true)
