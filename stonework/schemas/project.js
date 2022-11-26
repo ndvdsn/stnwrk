@@ -1,12 +1,27 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
+    },
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+    },
+    {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+    },
+    {
+    name: 'summary',
+    title: 'Summary',
+    type: 'text',
     },
     {
       name: 'slug',
@@ -17,15 +32,18 @@ export default {
         maxLength: 96,
       },
     },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    },
+ 
     {
       name: 'mainImage',
       title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'contextImage',
+      title: 'Context image',
       type: 'image',
       options: {
         hotspot: true,
@@ -38,6 +56,12 @@ export default {
       of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
+      name: 'photos',
+      title: 'Photos',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'photo'}}],
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
@@ -48,18 +72,4 @@ export default {
       type: 'blockContent',
     },
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
-    },
-  },
 }
