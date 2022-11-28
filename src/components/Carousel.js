@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 const Carousel = ({images}) => {
 
   // const [images, setImages] = useState()
-  const [currentImage, setCurrentImage] = useState(null)
+  const [currentImage, setCurrentImage] = useState(images[0])
   const [imageIndex, setImageIndex] = useState(0)
 
   // useEffect(()=> {
