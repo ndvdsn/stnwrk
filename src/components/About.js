@@ -25,7 +25,7 @@ const About = () => {
 if(!about) return <div className="sm:w-1/2 sm:h-96 items-center bg-white mx-auto"></div>
   return (
     <main className=" min-h-screen sm:p-12">
-          <header className="container mx-auto bg-white grid grid-cols-1 sm:grid-cols-2 p-12 bg-green-100">
+          <header className="container mx-auto bg-white grid grid-cols-1 sm:grid-cols-2 p-2 sm:p-12 bg-green-100">
             <div className="bg-white shadow-lg">
             <h2 className="text-xl p-4 font-bold">About</h2>
             
