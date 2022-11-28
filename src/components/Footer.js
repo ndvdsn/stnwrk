@@ -9,7 +9,7 @@ const Footer = () => {
         <nav className="flex">
           
             <NavLink to="/" className="inline-flex items-center px-3 rounded text-gray-800 hover:text-pink-500" 
-            activeClassName="underline">
+            activeclassname="underline">
                 Home
             </NavLink>
            

@@ -9,18 +9,18 @@ const Header = () => {
         <nav className="sm:flex ">
             <NavLink 
             to="/" 
-            exact 
-            activeClassName=""
+            exact="true"
+            
             className="inline-flex items-center py-6 px-3 mr-4 text-gray-800 text-4xl font-bold title tracking-widest">
                 Uist & Ross Dry Stone Walling
             </NavLink>
             {/* <small className="inline-flex items-center py-6 px-3 mr-4 text-gray-800 text-1xl font-bold tracking-widest">( Dry Stone Walling )</small> */}
             <NavLink to="/projects" className="inline-flex items-end px-3 py-2 my-6 rounded text-gray-800 hover:text-pink-500"
-            activeClassName="underline">
+            activeclassname="underline">
                 Projects
             </NavLink>
             <NavLink to="/about" className="inline-flex items-end px-3 py-2 my-6 rounded text-gray-800 hover:text-pink-500" 
-            activeClassName="underline">
+            activeclassname="underline">
                 About
             </NavLink>
            

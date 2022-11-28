@@ -32,7 +32,7 @@ if(!about) return <div className="sm:w-1/2 sm:h-96 items-center bg-white mx-auto
             <div className="flex flex-wrap p-4">
             <p className="pb-4">{about && about.title}</p>
             <p>{about && about.description}</p>
-            <p className="pt-4">Contact: {about && about.contact}</p>
+            <p className="pt-4">Contact Neil: {about && about.contact}</p>
             </div>
          
             </div>

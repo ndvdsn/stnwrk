@@ -56,10 +56,10 @@ const Project = () => {
     if(!project) return <div className="container mx-auto text-center">Loading...</div>
   return (
     <main className=" min-h-screen sm:p-12">
-        <header className="container mx-auto bg-white grid grid-cols-1 sm:grid-cols-2 p-12 bg-green-100">
+        <header className="container mx-auto grid grid-cols-1 sm:grid-cols-2 p-2 sm:p-12 bg-green-100">
             <div className="bg-white shadow-lg">
             <h2 className="text-xl p-4">{project.title}</h2>
-            <p className="p-4 text-sm">Client: {project.location}</p>
+            <p className="p-4 text-sm">Location: {project.location}</p>
             <div className="flex flex-wrap p-4">
             <p>{project.summary}</p>
               <p><br></br>{project.categories && project.categories.map((category, index)=> (<b key={index} className="mr-2 text-sm">{category.title}</b>))}
@@ -79,7 +79,7 @@ const Project = () => {
                 <BlockContent blocks={project.body} projectId="fvwk0498" dataset="production"/>
             </div> */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 p-12 bg-green-100">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 p-2 sm:p-12 bg-green-100">
               {project.photos && project.photos.map((photo, index)=> (
                 <div key={index} className="shadow-lg bg-white">
                   <img src={photo.mainImage.asset.url} alt={photo.alt} />
