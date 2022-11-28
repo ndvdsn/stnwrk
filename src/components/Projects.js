@@ -34,7 +34,7 @@ const Projects = () => {
   if(!projects) return <div className="container mx-auto text-center">Loading...</div>
   return (
     <main className="min-h-screen">
-    <section className="grid grid-cols-1 sm:grid-cols-2 gap-12 p-12">
+    <section className="grid grid-cols-1 sm:grid-cols-2 gap-12 p-2 sm:p-12">
         {projects && projects.map((project, index)=> (
 
             <Card key={index} project={project} index={index}/>

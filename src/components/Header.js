@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-white">
     <div className="bg-white container mx-auto flex justify-between px-8" >
-        <nav className="flex">
+        <nav className="sm:flex ">
             <NavLink 
             to="/" 
             exact 
@@ -15,11 +15,11 @@ const Header = () => {
                 Uist & Ross Dry Stone Walling
             </NavLink>
             {/* <small className="inline-flex items-center py-6 px-3 mr-4 text-gray-800 text-1xl font-bold tracking-widest">( Dry Stone Walling )</small> */}
-            <NavLink to="/projects" className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-800 hover:text-pink-500"
+            <NavLink to="/projects" className="inline-flex items-end px-3 py-2 my-6 rounded text-gray-800 hover:text-pink-500"
             activeClassName="underline">
                 Projects
             </NavLink>
-            <NavLink to="/about" className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-800 hover:text-pink-500" 
+            <NavLink to="/about" className="inline-flex items-end px-3 py-2 my-6 rounded text-gray-800 hover:text-pink-500" 
             activeClassName="underline">
                 About
             </NavLink>

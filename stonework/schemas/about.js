@@ -14,6 +14,11 @@ export default {
         type: 'text',
       },
       {
+        name: 'contact',
+        title: 'Contact',
+        type: 'string',
+      },
+      {
         name: 'mainImage',
         title: 'Main image',
         type: 'image',

@@ -1,32 +1,53 @@
 import React, {useState, useEffect} from 'react'
-import sanityClient from '../client'
+// import sanityClient from '../client'
 
-const Carousel = () => {
+const Carousel = ({images}) => {
 
-  const [images, setImages] = useState()
+  // const [images, setImages] = useState()
+  const [currentImage, setCurrentImage] = useState(null)
+  const [imageIndex, setImageIndex] = useState(0)
+
+  // useEffect(()=> {
+  //   sanityClient
+  //   .fetch(
+  //     `*[_type == "photo" && carousel == true]{
+  //         title,
+  //         mainImage{
+  //           asset->{
+  //               _id,
+  //               url
+  //           },
+  //       },
+          
+  //     }`
+  //   )
+  //   .then((data) => setImages(data))
+  //   .catch(console.error)
+  // },[])
+
+
+  const setImage = () => {
+    
+    if(imageIndex < images.length-1){
+      setImageIndex(imageIndex + 1)
+    }else{
+      setImageIndex(0)
+    }
+    setCurrentImage(images[imageIndex])
+  }
 
   useEffect(()=> {
-    sanityClient
-    .fetch(
-      `*[_type == "photo" && carousel == true]{
-          title,
-          mainImage{
-            asset->{
-                _id,
-                url
-            },
-        },
-          
-      }`
-    )
-    .then((data) => setImages(data))
-    .catch(console.error)
-  },[])
+    const interval = setInterval(()=> {
+      setImage()
+    }, 3000);
+    return () => clearInterval(interval)
+  })
 
-  console.log(images && images)
-  if(!images) return <div>Loading</div>
+  if(!currentImage) return <div className="sm:w-1/2 sm:h-96 items-center bg-white mx-auto"></div>
   return (
-    <div>Carousel</div>
+    <section className="mx-auto flex bg-white sm:w-1/2">
+      <img src={currentImage ? currentImage.mainImage.asset.url : "/"} alt="" className="sm:h-96"/>
+    </section >
   )
 }
 
