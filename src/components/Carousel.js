@@ -43,10 +43,10 @@ const Carousel = ({images}) => {
     return () => clearInterval(interval)
   })
 
-  if(!currentImage) return <div className="sm:w-1/2 sm:h-96 items-center bg-white mx-auto"></div>
+  if(!currentImage) return <div className="sm:w-1/2 sm:h-1/2 items-center bg-white mx-auto"></div>
   return (
     <section className="mx-auto flex bg-white sm:w-1/2">
-      <img src={currentImage ? currentImage.mainImage.asset.url : "/"} alt="" className="sm:h-96"/>
+      <img src={currentImage ? currentImage.mainImage.asset.url : "/"} alt="" className="object-cover"/>
     </section >
   )
 }

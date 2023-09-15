@@ -18,11 +18,11 @@ const Card = ({project, index}) => {
     return (
         <article className="relative shadow-lg" onMouseOver={hover} onMouseOut={unhover}>
         <NavLink to={"/projects/"+project.slug.current} >
-            <div className={`flex bg-red-500 static justify-end w-full h-96 ${opacity ? "opacity-80" : ""}`}>
-                <img src={project.mainImage.asset.url} alt={project.mainImage.alt} className="object-cover relative"/> 
+            <div className={`flex static justify-end w-full h-96 ${opacity ? "opacity-80" : ""}`}>
+                <img src={project.mainImage.asset.url} alt={project.mainImage.alt} className="object-cover w-3/4 h-96 relative"/> 
             
             </div>
-            <div className={`absolute p-2 flex flex-col justify-between ${cols[index]} h-96 w-36 sm:w-56 bottom-0`}>
+            <div className={`absolute p-2 flex flex-col justify-between ${cols[index]} h-96 w-full sm:w-56 bottom-0`}>
                 <h4 className="text-xl">{project.title}</h4>
                 
                 <div className="flex flex-wrap w-36 sm:w-56 text-sm">

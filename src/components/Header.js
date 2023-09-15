@@ -19,10 +19,10 @@ const Header = () => {
             activeclassname="underline">
                 Projects
             </NavLink>
-            <NavLink to="/about" className="inline-flex items-end px-3 py-2 my-6 rounded text-gray-800 hover:text-pink-500" 
+            {/* <NavLink to="/about" className="inline-flex items-end px-3 py-2 my-6 rounded text-gray-800 hover:text-pink-500" 
             activeclassname="underline">
                 About
-            </NavLink>
+            </NavLink> */}
            
         </nav>
         <div className="inline-flex py-3 px-3 my-6">

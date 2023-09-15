@@ -4,8 +4,8 @@ import { SocialIcon } from 'react-social-icons'
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
-    <div className="bg-white container mx-auto flex justify-between px-8 sm:pt-6 mt-24" >
+    <footer className="bg-white pb-12 bg-slate-100">
+    <div className="container mx-auto flex justify-between px-8 sm:pt-6 mt-24" >
         <nav className="flex">
           
             <NavLink to="/" className="inline-flex items-center px-3 rounded text-gray-800 hover:text-pink-500" 
