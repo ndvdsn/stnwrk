@@ -7,27 +7,7 @@ const Carousel = ({images}) => {
   const [currentImage, setCurrentImage] = useState(images[0])
   const [imageIndex, setImageIndex] = useState(0)
 
-  // useEffect(()=> {
-  //   sanityClient
-  //   .fetch(
-  //     `*[_type == "photo" && carousel == true]{
-  //         title,
-  //         mainImage{
-  //           asset->{
-  //               _id,
-  //               url
-  //           },
-  //       },
-          
-  //     }`
-  //   )
-  //   .then((data) => setImages(data))
-  //   .catch(console.error)
-  // },[])
-
-
   const setImage = () => {
-    
     if(imageIndex < images.length-1){
       setImageIndex(imageIndex + 1)
     }else{

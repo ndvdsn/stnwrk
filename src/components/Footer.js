@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons'
 
 const Footer = () => {
   return (
-    <footer className="bg-white pb-12 bg-slate-100">
+    <footer className="bg-white pb-12 border-t">
     <div className="container mx-auto flex justify-between px-8 sm:pt-6 mt-24" >
         <nav className="flex">
           

@@ -4,14 +4,14 @@ import { SocialIcon } from 'react-social-icons'
 
 const Header = () => {
   return (
-    <header className="bg-white">
+    <header className="bg-white font-serif border-b-2 border-slate-800">
     <div className="bg-white container mx-auto flex justify-between px-8" >
         <nav className="sm:flex ">
             <NavLink 
             to="/" 
             exact="true"
             
-            className="inline-flex items-center py-6 px-3 mr-4 text-gray-800 text-4xl font-bold title tracking-widest">
+            className="inline-flex items-center py-6 px-3 mr-4 text-gray-800 text-4xl title tracking-widest">
                 Uist & Ross Dry Stone Walling
             </NavLink>
             {/* <small className="inline-flex items-center py-6 px-3 mr-4 text-gray-800 text-1xl font-bold tracking-widest">( Dry Stone Walling )</small> */}
